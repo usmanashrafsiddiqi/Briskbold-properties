@@ -60,7 +60,7 @@ export const Contact = () => {
       id="contact"
       className="relative bg-cover bg-center bg-no-repeat py-20"
       style={{
-        backgroundImage: "url('/contactbg.jpg')",
+        backgroundImage: "url('/connew.jpg')",
       }}
     >
       {/* Contact Us Heading */}
@@ -74,9 +74,12 @@ export const Contact = () => {
         {locations.map((location, index) => (
           <div
             key={index}
-            className="bg-white bg-opacity-10 rounded-lg shadow-lg p-6 flex flex-col items-center hover:scale-105 transform transition-all"
+            className="bg-white bg-opacity-30 rounded-lg shadow-xl p-6 flex flex-col items-center hover:scale-105 transform transition-all backdrop-blur-xl border border-transparent"
+            style={{
+              borderImage: 'linear-gradient(45deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3)) 1 stretch',
+            }}
           >
-            <div className="w-16 h-16 mb-4    overflow-hidden">
+            <div className="w-16 h-16 mb-4 overflow-hidden">
               <img
                 src={location.img}
                 alt={`${location.name} icon`}
@@ -85,10 +88,9 @@ export const Contact = () => {
             </div>
 
             {/* Location Name with Gradient Effect */}
-            <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-pink-500 mb-2">
-              {location.name}
-            </h2>
-
+            <h2 className="text-2xl font-bold text-white mb-2">
+  {location.name}
+</h2>
             {/* Location Address */}
             <div className="text-white text-center mb-4">
               {location.address.map((line, idx) => (
