@@ -53,14 +53,15 @@ const Navbar = () => {
                     >
                         Testimonials
                     </a>
+                    {/* Contact Us as an <a> tag */}
+                    <a
+                        href="#contact"
+                        className='cursor-pointer hover:text-gray-400 bg-white text-black px-6 py-1.5 rounded-full text-sm transition-all duration-300'
+                        onClick={scrollToContact}
+                    >
+                        Contact Us
+                    </a>
                 </ul>
-                {/* Replace Sign Up with Contact Us button */}
-                <button
-                    onClick={scrollToContact}
-                    className='hidden md:block bg-white px-8 py-2 rounded-full'
-                >
-                    Contact Us
-                </button>
                 <img onClick={() => { setshowmobilemenu(true) }} src={assets.menu_icon} className='md:hidden w-7 cursor-pointer' alt="" />
             </div>
 
@@ -74,7 +75,7 @@ const Navbar = () => {
                     <a onClick={() => { setshowmobilemenu(false) }} href="#About" className='px-4 py-2 rounded-full inline-block'> About</a>
                     <a onClick={() => { setshowmobilemenu(false) }} href="#Projects" className='px-4 py-2 rounded-full inline-block'> Projects</a>
                     <a onClick={() => { setshowmobilemenu(false) }} href="#Testimonials" className='px-4 py-2 rounded-full inline-block'> Testimonials</a>
-                    {/* Mobile Contact Us Button */}
+                    {/* Mobile Contact Us as an <a> */}
                     <a onClick={() => { setshowmobilemenu(false); scrollToContact(); }} className='px-4 py-2 rounded-full inline-block'>
                         Contact Us
                     </a>

@@ -14,7 +14,7 @@ const Footer = () => {
             <div>
               <a href="#Header" className="block mb-1 hover:text-blue-400">Home</a>
               <a href="#About" className="block mb-1 hover:text-blue-400">About Us</a>
-              <a href="#services" className="block mb-1 hover:text-blue-400">Services</a>
+              <a href="#Projects" className="block mb-1 hover:text-blue-400">Projects</a>
               <a href="#contact" className="block mb-1 hover:text-blue-400">Contact Us</a>
             </div>
           </div>
