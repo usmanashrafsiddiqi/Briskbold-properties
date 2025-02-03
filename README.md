@@ -1,8 +1,17 @@
-# React + Vite
+# BriskBold AI & Automation Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official landing page of **BriskBold AI & Automation**!  
+This website serves as the digital face of BriskBold, showcasing the company's cutting-edge AI and automation solutions with an engaging and user-friendly interface.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can view the live version of the website here:  
+[BriskBold AI & Automation](https://briskbold.com/)
+
+## Tech Stack
+
+This project is built using:
+- **React**: For creating the dynamic and interactive UI components.
+- **TailwindCSS**: For utility-first CSS styling that enables fast and responsive design.
+- **Material-UI (MUI)**: For pre-built, customizable React components to streamline UI development.
+- **Vite**: A fast build tool that provides fast refresh and efficient bundling during development.
