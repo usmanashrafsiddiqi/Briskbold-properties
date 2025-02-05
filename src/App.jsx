@@ -5,6 +5,7 @@ import Projects from "./components/Projects"
 import { Contact } from "./components/Contact"
 import Testimonials from "./components/Testimonials"
 import Footer from "./components/Footer"
+import ComingSoon from "./components/ComingSoon"
 function App() {
  
 
@@ -15,6 +16,7 @@ function App() {
 
   <Header/>
 <Projects/>
+<ComingSoon/>
   <About/>
 <Testimonials/>
 <Contact/>

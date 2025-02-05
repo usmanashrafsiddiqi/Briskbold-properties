@@ -39,10 +39,10 @@ const Projects = () => {
     };
 
     return (
-        <div className="container mx-auto py-4 pt-2 md:px-20 lg:px-32 my-20 w-full overflow-hidden" id="Projects">
-            <h1 className="text-2xl sm:text-4xl font-bold mb-0 text-center">
-                Projects <span className="underline underline-offset-4 decoration-1 under">Completed</span>
-            </h1>
+        <div className="py-4 pt-2 md:px-20 lg:px-32 w-full overflow-hidden bg-gray-200 mx-0 mt-0  pb-10" id="Projects">
+            <h1 className="text-2xl sm:text-4xl font-bold mb-0 text-center underline mt-6">
+                Projects 
+            </h1> {/* Added mt-6 to give a slight margin from the top */}
             <p className="text-center text-gray-500 mb-2 max-w-80 mx-auto">
                 Crafting spaces, Building Legacies-Explore Our Portfolio
             </p>

@@ -7,6 +7,26 @@ import left_arrow from './left_arrow.svg'
 import right_arrow from './right_arrow.svg'
 import header_img from './header_img.png'
 import brand_img from './brand_img.jpg'
+import coming1 from './2.jpg'
+import coming2 from './3.jpg'
+import coming3 from './4.jpg'
+import coming4 from './5.jpg'
+import coming5 from './6.jpg'
+import coming6 from './7.jpg'
+import coming7 from './8.jpg'
+import coming8 from './9.jpg'
+import coming9 from './10.jpg'
+import coming10 from './11.jpg'
+import coming11 from './12.jpg'
+import coming12 from './13.jpg'
+import coming13 from './14.jpg'
+import coming14 from './15.jpg'
+import coming15 from './22.jpg'
+import coming16 from './17.jpg'
+import coming17 from './18.jpg'
+import coming18 from './19.jpg'
+import coming19 from './20.jpg'
+import coming20 from './21.jpg'
 import project_img_1 from './propertyone.webp'
 import project_img_2 from './propertytwo.jpg'
 import project_img_3 from './propertythree.jpg'
@@ -143,3 +163,30 @@ export const projectsData = [
         text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
     }
 ];
+
+
+const CommingSoonimages = [
+  { image: coming1 },
+  { image: coming2 },
+  { image: coming3 },
+  { image: coming4 },
+  { image: coming5 },
+  { image: coming6 },
+  { image: coming7 },
+  { image: coming8 },
+  { image: coming9 },
+  { image: coming10 },
+  { image: coming11 },
+  { image: coming12 },
+  { image: coming13 },
+  { image: coming14 },
+  { image: coming15 },
+  { image: coming16 },
+  { image: coming17 },
+  { image: coming18 },
+  { image: coming19 },
+  { image: coming20 },
+  
+];
+
+export default CommingSoonimages;
