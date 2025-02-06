@@ -145,7 +145,7 @@ export const Contact = () => {
           <br />
           <a
             href="mailto:info@briskboldit.com"
-            className="text-blue-500 font-semibold"
+            className="text-white-500 font-semibold"
           >
             info@briskboldit.com
           </a>

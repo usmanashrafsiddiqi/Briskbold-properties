@@ -57,7 +57,7 @@ const About = () => {
 
                 {/* Button below stats aligned to the left */}
                 <div className="flex justify-start">
-                    <button className="bg-blue-600 text-white px-8 py-2 rounded">
+                    <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-2 rounded">
                         Learn more
                     </button>
                 </div>

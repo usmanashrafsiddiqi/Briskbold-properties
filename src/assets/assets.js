@@ -11,7 +11,7 @@ import coming1 from './2.jpg'
 import coming2 from './3.jpg'
 import coming3 from './4.jpg'
 import coming4 from './5.jpg'
-import coming5 from './6.jpg'
+import coming5 from './22.jpg'
 import coming6 from './7.jpg'
 import coming7 from './8.jpg'
 import coming8 from './9.jpg'
@@ -27,166 +27,221 @@ import coming17 from './18.jpg'
 import coming18 from './19.jpg'
 import coming19 from './20.jpg'
 import coming20 from './21.jpg'
-import project_img_1 from './propertyone.webp'
-import project_img_2 from './propertytwo.jpg'
-import project_img_3 from './propertythree.jpg'
-import project_img_4 from './propertyfour.jpg'
-import project_img_5 from './propertyfive.jpg'
-import project_img_6 from './propertysix.jpg'
-import project_img_7 from './propertyseven.jpg'
-import project_img_8 from './propertyeight.jpg'
-import project_img_9 from './propertynine.jpg'
-import project_img_10 from './propertyten.jpg'
-import project_img_11 from './propertyeleven.jpg'
-import profile_img_1 from './profile_img_1.png'
-import profile_img_2 from './profile_img_2.png'
-import profile_img_3 from './profile_img_3.png'
+import project_img_1 from './Hillsedge at Dubai Hills Estate AU 66.jpg'
+import project_img_2 from './Aeon at Dubai Creek HarbourAU 3.jpg'
+import project_img_3 from './Altus at Dubai Creek Harbour AU 4.jpg'
+import project_img_4 from './Bayview by Address Resorts at Emaar Beachfront AU 6.jpg'
+import project_img_5 from './Cedar at Dubai Creek Harbour AU 9.jpg'
+import project_img_6 from './Club Place at Dubai Hills Estate AU 31.jpg'
+import project_img_7 from './Elva at The Valley AU 12.jpg'
+import project_img_8 from './Golf Acres at Emaar South AU 1.jpg'
+import project_img_9 from './Golf Dale at Emaar South AU 3.jpg'
+import project_img_10 from './Golf Edge at Emaar South AU 11.jpg'
+import project_img_11 from './Golf Hillside at Dubai Hills Estate AU 27.jpg'
+import profile_img_1 from './testi1.jpeg'
+import profile_img_2 from './testi2.png'
+import profile_img_3 from './testi3.jpg'
 
 export const assets = {
-    logo,
-    logo_dark,
-    cross_icon,
-    menu_icon,
-    star_icon,
-    header_img,
-    brand_img,
-    project_img_1,
-    project_img_2,
-    project_img_3,
-    project_img_4,
-    left_arrow,
-    right_arrow,
+  logo,
+  logo_dark,
+  cross_icon,
+  menu_icon,
+  star_icon,
+  header_img,
+  brand_img,
+  project_img_1,
+  project_img_2,
+  project_img_3,
+  project_img_4,
+  left_arrow,
+  right_arrow,
 }
 
 export const projectsData = [
-    {
-      title: "Genuine Resale",
-      price: "236,000,000 AED",
-      location: "Greenview 3 ,Dubai South",
-      image: project_img_1
-    },
-    {
-      title: "VIP Front basement",
-      price: "250,000,000 AED",
-      location: "Signature Villas,Palm Jumeriah,Dubai",
-      image: project_img_4
-    },
-    {
-      title: "Twin Villa",
-      price: "5,325,000 AED",
-      location: "Tilal AL Glaf,Dubai",
-      image: project_img_9
-    },
-    {
-      title: "Custom Villa",
-      price: "7,900,000 AED",
-      location: "Signature Villas,Palm Jumeriah,Dubai",
-      image: project_img_11
-    },
-    {
-      title: "Serenity Suites",
-      price: "2,50,000 AED",
-      location: "Chicago",
-      image: project_img_6
-    },
-    {
-      title: "Vista Verde",
-      price: "2,50,000 AED",
-      location: "San Francisco",
-      image: project_img_5
-    },
-    {
-      title: "Vista Verde",
-      price: "2,50,000 AED",
-      location: "San Francisco",
-      image: project_img_2
-    },
-    {
-      title: "Serenity Suites",
-      price: "2,50,000  AED",
-      location: "Chicago",
-      image: project_img_3
-    },
-   
-    
-    {
-      title: "Serenity Suites",
-      price: "2,50,000 AED",
-      location: "Chicago",
-      image: project_img_7
-    },
-    {
-      title: "Serenity Suites",
-      price: "2,50,000 AED",
-      location: "Chicago",
-      image: project_img_8
-    },
-    {
-      title: "Serenity Suites",
-      price: "2,50,000 AED",
-      location: "Chicago",
-      image: project_img_9
-    },
-    {
-      title: "Serenity Suites",
-      price: "2,50,000 AED",
-      location: "Chicago",
-      image: project_img_10
-    },
-   
-    
-  ];
+  {
+    title: "Hillsedge",
+    Units: " AVAILIBLE UNITS = 66",
+    location: " Dubai Hills Estate",
+    image: project_img_1
+  },
+  {
+    title: "Aeon",
+    Units: " AVAILIBLE UNITS = 3",
+    location: " Dubai Creek Harbour",
+    image: project_img_2
+  },
+  {
+    title: "Altus",
+    Units: " AVAILIBLE UNITS = 4",
+    location: " Dubai Creek Harbour",
+    image: project_img_3
+  },
+  {
+    title: "Bayview",
+    Units: " AVAILIBLE UNITS = 6",
+    location: "Emaar Beachfront ",
+    image: project_img_4
+  },
+  {
+    title: " Cedar",
+    Units: " AVAILIBLE UNITS = 9",
+    location: "Dubai Creek Harbour",
+    image: project_img_5
+  },
+  {
+    title: "Club Place",
+    Units: " AVAILIBLE UNITS = 31",
+    location: "Dubai Hills Estate",
+    image: project_img_6
+  },
+  {
+    title: "Elva",
+    Units: " AVAILIBLE UNITS = 12",
+    location: "The Valley",
+    image: project_img_7
+  },
+  {
+    title: "Golf Acres",
+    Units: " AVAILIBLE UNITS = 1",
+    location: "Emaar South",
+    image: project_img_8
+  },
 
-  export const testimonialsData = [
-    {
-        name: "Donald Jackman",
-        title: "Marketing Manager",
-        image: profile_img_1,
-        alt: "Portrait of Donald Jackman",
-        rating: 5,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
-    },
-    {
-        name: "Richard Nelson",
-        title: "UI/UX Designer",
-        image: profile_img_2,
-        alt: "Portrait of Richard Nelson",
-        rating: 4,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
-    },
-    {
-        name: "James Washington",
-        title: "Co-Founder",
-        image: profile_img_3,
-        alt: "Portrait of James Washington",
-        rating: 5,
-        text: "From the very first meeting, they understood my vision and helped me find the perfect property. Their attention to detail and commitment to client satisfaction is unmatched."
-    }
+
+  {
+    title: "Golf Dale",
+    Units: " AVAILIBLE UNITS = 3",
+    location: "Emaar South",
+    image: project_img_9
+  },
+  {
+    title: "Golf edge",
+    Units: " AVAILIBLE UNITS = 11",
+    location: "Emaar South",
+    image: project_img_10
+  },
+  {
+    title: "Golf Hillside",
+    Units: " AVAILIBLE UNITS = 21",
+    location: "Dubai Hills Estate",
+    image: project_img_11
+  },
+ 
+
+];
+
+export const testimonialsData = [
+  {
+    name: "Hilal Paray",
+    
+    image: profile_img_1,
+    alt: "Portrait of Hilal paray",
+    rating: 5,
+    text: "As a first-time homebuyer, I was nervous about the process, but BriskBOLD Properties made everything easy and straightforward. They were patient, answered all my questions, and helped me find a home that I absolutely love. I felt supported every step of the way!"
+  },
+  {
+    name: "Aimain Rashid",
+   
+    image: profile_img_2,
+    alt: "Portrait of Aimain Rashid",
+    rating: 4,
+    text: "If you’re looking for a reliable, honest, and hardworking real estate agent, look no further than BriskBOLD Properties. They truly care about their clients and made me feel like a priority throughout the entire process. I’m so grateful for their help!"
+  },
+  {
+    name: "Ummaimah Bhat",
+    
+    image: profile_img_3,
+    alt: "Portrait of Ummaimah",
+    rating: 5,
+    text: "I can’t thank BriskBOLD enough for helping me find the perfect investment property. Their knowledge of the market and attention to detail were outstanding. The whole process was efficient and smooth. I highly recommend their services to anyone looking to buy or sell!"
+  }
 ];
 
 
 const CommingSoonimages = [
-  { image: coming1 },
-  { image: coming2 },
-  { image: coming3 },
-  { image: coming4 },
-  { image: coming5 },
-  { image: coming6 },
-  { image: coming7 },
-  { image: coming8 },
-  { image: coming9 },
-  { image: coming10 },
-  { image: coming11 },
-  { image: coming12 },
-  { image: coming13 },
-  { image: coming14 },
-  { image: coming15 },
-  { image: coming16 },
-  { image: coming17 },
-  { image: coming18 },
-  { image: coming19 },
-  { image: coming20 },
+  {
+    image: coming1,
+    tittle: "CEDAR AT DUBAI CREEK HARBOUR "
+  },
+  {
+    image: coming2,
+    tittle: "BAYVIEW BY ADDRESS RESORTS "
+  },
+  {
+    image: coming3,
+    tittle: "PARKSIDE VIEWS RESIDENCE "
+  },
+  {
+    image: coming4,
+    tittle: "MARJAN ISLAND "
+  },
+  {
+    image: coming5,
+    tittle: "GOLF ACRES AT EMAAR SOUTH"
+  },
+  {
+    image: coming6,
+    tittle: "ORIA AT DUBAI CREEK HARBOUR "
+  },
+  {
+    image: coming7,
+    tittle: "PARK LANE  "
+  },
+  {
+    image: coming8,
+    tittle: "VALO AT DUBAI CREEK HARBOUR "
+  },
+  {
+    image: coming9,
+    tittle: "MANGROVE "
+  },
+  {
+    image: coming10,
+    tittle: "ALTAS AT DUBAI CREEK HARBOUR "
+  },
+  {
+    image: coming11,
+    tittle: "CLUB PLACE AT DUBAI HILLS ESTATE  "
+  },
+  {
+    image: coming12,
+    tittle: "GOLF POINT AT EMAAR SOUTH "
+  },
+  {
+    image: coming13,
+    tittle: "GOLF HILLSIDE AT DUBAI HILLS ESTATE"
+  },
+  {
+    image: coming14,
+    tittle: "PIER POINT AT RASHID YACHTS "
+  },
+  {
+    image: coming15,
+    tittle: "GOLF ACRES AT EMAAR SOUTH"
+  },
+  {
+    image: coming16,
+    tittle: "MARINA COVE AT DUBAI MARINA "
+  },
+  {
+    image: coming17,
+    tittle: "TEERA HEIGHTS AT EXPO LIVING "
+  },
+  {
+    image: coming18,
+    tittle: "MARINA PLACE 2 AT RASHID YACHTS & MARINA"
+  },
+  {
+    image: coming19,
+    tittle: "MARINA PLACE 2 AT RASHID YACHTS & MARINA"
   
+  },
+  {
+    image: coming20,
+    tittle: "HILL SEDGE AT DUBAI HILLS ESTATE "
+  },
+
 ];
 
 export default CommingSoonimages;
