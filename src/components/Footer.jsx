@@ -58,25 +58,28 @@ const Footer = () => {
               </button>
             </a>
 
-            <a href="https://x.com/BriskBoldAI" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/BB_Properties01" target="_blank" rel="noopener noreferrer">
               <button className="p-1 hover:text-blue-500 transition-colors duration-200">
                 <FaTwitter size={24} />
               </button>
             </a>
 
-            <a href="https://www.linkedin.com/company/briskbold/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/106345715/admin/dashboard/" target="_blank" rel="noopener noreferrer">
               <button className="p-1 hover:text-blue-500 transition-colors duration-200">
                 <FaLinkedin size={24} />
               </button>
             </a>
 
-            <a href="https://www.youtube.com/@BriskBoldAIAutomation" target="_blank" rel="noopener noreferrer">
+            <a href="https://youtube.com/@briskboldproperties01?si=luUiLXnThAXfwNJL" target="_blank" rel="noopener noreferrer">
               <button className="p-1 hover:text-red-500 transition-colors duration-200">
                 <FaYoutube size={24} />
               </button>
             </a>
 
-            <a href="https://www.instagram.com/briskbold_ai_automation/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/brisk_boldproperties?igsh=eXJzcWxkeHB6Mmkx
+Login • Instagram
+Welcome back to Instagram. Sign in to check out what your friends, family & interests have been capturing & sharing around the world.
+ " target="_blank" rel="noopener noreferrer">
               <button className="p-1 hover:text-pink-500 transition-colors duration-200">
                 <FaInstagram size={24} />
               </button>
