@@ -54,14 +54,14 @@ const Projects = () => {
                     className="p-3 bg-gray-200 rounded-full transform hover:scale-110 transition-all duration-300 shadow-md hover:bg-gray-300"
                     aria-label="Previous-Project"
                 >
-                    <img src={assets.left_arrow} alt="Previous" className="w-8 h-8 transform hover:rotate-180 transition-all duration-300" />
+                    <img src={assets.left_arrow} alt="Previous" className="w-5 h-5 transform hover:rotate-180 transition-all duration-300" />
                 </button>
                 <button
                     onClick={nextProject}
                     className="p-3 bg-gray-200 rounded-full transform hover:scale-110 transition-all duration-300 shadow-md hover:bg-gray-300"
                     aria-label="Next-Project"
                 >
-                    <img src={assets.right_arrow} alt="Next" className="w-8 h-8 transform hover:rotate-180 transition-all duration-300" />
+                    <img src={assets.right_arrow} alt="Next" className="w-5 h-5 transform hover:rotate-180 transition-all duration-300" />
                 </button>
             </div>
 
@@ -80,7 +80,7 @@ const Projects = () => {
                                 <img
                                     src={project.image}
                                     alt={project.title}
-                                    className="w-full h-[400px] object-cover mb-4 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-75"
+                                    className="w-full h-[400px] sm:h-[300px] md:h-[350px] object-cover mb-4 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:brightness-75"
                                 />
                                 {/* Title, price, and location box, no hover effect */}
                                 <div className="bg-white px-4 py-2 shadow-md w-full">
