@@ -68,13 +68,19 @@ const Projects = () => {
             {/* ----------------------project slider container------------------------------ */}
             <div className="overflow-hidden">
                 <div
-                    className="flex gap-8 transition-transform duration-500 ease-in-out"
+                    className="flex transition-transform duration-500 ease-in-out gap-0 sm:gap-4 md:gap-6 lg:gap-8" // Added responsive gap
                     style={{
                         transform: `translateX(-${(currentIndex * 100) / cardsToShow}%)`,
                     }}
                 >
                     {projectsData.map((project, index) => (
-                        <div className="relative flex-shrink-0 w-full sm:w-1/3" key={index}>
+                        <div
+                            className="relative flex-shrink-0"
+                            style={{
+                                width: `${100 / cardsToShow}%`, // Adjust width based on the number of cards to show
+                            }}
+                            key={index}
+                        >
                             {/* Image Container with Hover Effect */}
                             <div className="group relative overflow-hidden">
                                 <img

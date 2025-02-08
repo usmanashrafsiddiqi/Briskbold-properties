@@ -26,17 +26,17 @@ const About = () => {
                 border-image:linear-gradient(45deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3)) 1 stretch
                 ">
                 {/* Paragraph at the top */}
-                <p className="text-black mb-8">
+                <p className="text-black mb-8 text-center sm:text-left">
                     <strong>BriskBOLD Properties</strong> is a leading real estate brokerage firm in the UAE, known for its expertise, professionalism, and commitment to delivering exceptional client experiences. Our team of multilingual and highly skilled agents ensures tailored solutions for every property need.
                 </p>
 
-                <p className="text-black mb-8">
+                <p className="text-black mb-8 text-center sm:text-left">
                     <strong>Who We Are</strong><br />
                     From specializing in off-plan properties to offering end-to-end real estate services across residential, commercial, luxury, and holiday homes, BriskBOLD Properties has evolved to meet the dynamic needs of the market. Built on a foundation of trust and transparency, we are dedicated to exceeding expectations and fostering long-lasting relationships with our clients.
                 </p>
 
                 {/* Stats below the paragraph */}
-                <div className="grid grid-cols-2 gap-6 md:gap-10 mb-8">
+                <div className="grid grid-cols-2 gap-6 md:gap-10 mb-8 text-center sm:text-left">
                     <div>
                         <p className="text-4xl font-medium text-black">5+</p>
                         <p className="text-black">Years of Excellence</p>
@@ -55,9 +55,9 @@ const About = () => {
                     </div>
                 </div>
 
-                {/* Button below stats aligned to the left */}
-                <div className="flex justify-start">
-                    <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-2 rounded">
+                {/* Button below stats aligned to the left for larger screens, centered for small screens */}
+                <div className="flex justify-center sm:justify-start">
+                    <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-2 rounded mt-4">
                         Learn more
                     </button>
                 </div>
