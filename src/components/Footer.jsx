@@ -52,7 +52,7 @@ const Footer = () => {
         {/* Social Media Section */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
-            <a href="https://www.facebook.com/BriskBoldIT" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61573128565466&sk=about_details" target="_blank" rel="noopener noreferrer">
               <button className="p-1 hover:text-blue-500 transition-colors duration-200">
                 <FaFacebook size={24} />
               </button>
@@ -85,11 +85,7 @@ Welcome back to Instagram. Sign in to check out what your friends, family & inte
               </button>
             </a>
 
-            <a href="https://whatsapp.com/channel/0029VaBneGqLI8YX7LAQHs1k" target="_blank" rel="noopener noreferrer">
-              <button className="p-1 hover:text-green-500 transition-colors duration-200">
-                <FaWhatsapp size={24} />
-              </button>
-            </a>
+            
           </div>
         </div>
 

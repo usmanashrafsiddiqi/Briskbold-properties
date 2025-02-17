@@ -41,6 +41,12 @@ import project_img_11 from './Golf Hillside at Dubai Hills Estate AU 27.jpg'
 import profile_img_1 from './testi1.jpeg'
 import profile_img_2 from './testi2.png'
 import profile_img_3 from './testi3.jpg'
+import project_img_12 from './Sobha1.jpg'
+import project_img_13 from './Sobha2.jpg'
+import project_img_14 from './Sobha3.jpg'
+import project_img_15 from './Sobha4.jpg'
+import project_img_16 from './Sobha5.jpg'
+import project_img_17 from './Sobha6.jpg'
 
 export const assets = {
   logo,
@@ -127,6 +133,43 @@ export const projectsData = [
     location: "Dubai Hills Estate",
     image: project_img_11
   },
+  {
+    title: "Motor City",
+     Units: " AVAILIBLE",
+    location: "Motor City",
+    image: project_img_12
+  },
+  {
+    title: "Motor City",
+     Units: " AVAILIBLE",
+    location: "Motor City",
+    image: project_img_13
+  },
+  {
+    title: "Motor City",
+    Units: " AVAILIBLE",
+    location: "Motor City",
+    image: project_img_14
+  },
+  {
+    title: "Motor City",
+    Units: " AVAILIBLE",
+    location: "Motor City",
+    image: project_img_15
+  },
+  {
+    title: "Motor City",
+    Units: " AVAILIBLE",
+    location: "Motor City",
+    image: project_img_16
+  },
+  {
+    title: "Motor City",
+    Units: " AVAILIBLE",
+    location: "Motor City",
+    image: project_img_17
+  },
+
  
 
 ];
