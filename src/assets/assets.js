@@ -46,7 +46,7 @@ import project_img_13 from './Sobha2.jpg'
 import project_img_14 from './Sobha3.jpg'
 import project_img_15 from './Sobha4.jpg'
 import project_img_16 from './Sobha5.jpg'
-import project_img_17 from './Sobha6.jpg'
+
 
 export const assets = {
   logo,
@@ -163,13 +163,7 @@ export const projectsData = [
     location: "Motor City",
     image: project_img_16
   },
-  {
-    title: "Motor City",
-    Units: " AVAILIBLE",
-    location: "Motor City",
-    image: project_img_17
-  },
-
+ 
  
 
 ];
