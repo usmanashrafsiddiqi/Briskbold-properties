@@ -46,6 +46,17 @@ import project_img_13 from './Sobha2.jpg'
 import project_img_14 from './Sobha3.jpg'
 import project_img_15 from './Sobha4.jpg'
 import project_img_16 from './Sobha5.jpg'
+import project_img_17 from './Samanabazi1.jpg'
+import project_img_18 from './Samanabazi2.jpg'
+import project_img_19 from './Samanabazi3.jpg'
+import project_img_20 from './Binghatti1.jpg'
+import project_img_21 from './Binghatti2.jpg'
+import project_img_22 from './Binghatti3.jpg'
+import project_img_23 from './Binghatti4.jpg'
+import project_img_24 from './Timez1.jpg'
+import project_img_25 from './Timez2.jpg'
+import project_img_26 from './Timez3.jpg'
+import project_img_27 from './Timez4.jpg'
 
 
 export const assets = {
@@ -163,6 +174,76 @@ export const projectsData = [
     location: "Motor City",
     image: project_img_16
   },
+  {
+    title: "Samana",
+    Units: " AVAILIBLE",
+    location: "Samana",
+    image: project_img_17
+  },
+  {
+    title: "Samana",
+    Units: " AVAILIBLE",
+    location: "Samana",
+    image: project_img_18
+  },
+  {
+    title: "Samana",
+    Units: " AVAILIBLE",
+    location: "Samana",
+    image: project_img_19
+  },
+  {
+    title: "Binghatti",
+    Units: " AVAILIBLE",
+    location: "Binghatti",
+    image: project_img_20
+  },
+  {
+    title: "Binghatti",
+    Units: " AVAILIBLE",
+    location: "Binghatti",
+    image: project_img_21
+  },
+  {
+    title: "Binghatti",
+    Units: " AVAILIBLE",
+    location: "Binghatti",
+    image: project_img_22
+  },
+  {
+    title: "Binghatti",
+    Units: " AVAILIBLE",
+    location: "Binghatti",
+    image: project_img_23
+  },
+  {
+    title: "Timez",
+    Units: " AVAILIBLE",
+    location: "Timez",
+    image: project_img_24
+  },
+
+  {
+    title: "Timez",
+    Units: " AVAILIBLE",
+    location: "Timez",
+    image: project_img_25
+  },
+
+  {
+    title: "Timez",
+    Units: " AVAILIBLE",
+    location: "Timez",
+    image: project_img_26
+  },
+  {
+    title: "Timez",
+    Units: " AVAILIBLE",
+    location: "Timez",
+    image: project_img_27
+  },
+
+  
  
  
 
