@@ -1,12 +1,19 @@
 import React from 'react';
-import { assets } from '../assets/assets';
 
 const About = () => {
+    // Function to scroll to the Contact section
+    const scrollToContact = () => {
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <div
             className="relative flex flex-col items-center justify-center w-full p-14 md:px-20 lg:px-32 overflow-hidden bg-cover bg-center"
             style={{
-                backgroundImage: "url('/blurbg.jpg')", 
+                backgroundImage: "url('/blurbg.jpg')",
             }}
             id="About"
         >
@@ -57,7 +64,10 @@ const About = () => {
 
                 {/* Button below stats aligned to the left for larger screens, centered for small screens */}
                 <div className="flex justify-center sm:justify-start">
-                    <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-2 rounded mt-4">
+                    <button 
+                        className="bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-2 rounded mt-4"
+                        onClick={scrollToContact} // Scrolls to Contact on click
+                    >
                         Learn more
                     </button>
                 </div>
