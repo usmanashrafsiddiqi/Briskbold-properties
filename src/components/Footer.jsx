@@ -25,8 +25,8 @@ const Footer = () => {
               Contact Us
             </h2>
             <div>
-              <p className="mb-1">Email: info@briskboldit.com</p>
-              <p className="mb-1">Phone: (+971) 554372731</p>
+              <p className="mb-1">Email:bbpmarketing@briskboldproperties.com</p>
+              <p className="mb-1">Phone: (+971)56 924 2326</p>
               <p className="mb-1">Address: Business Bay, Dubai, UAE</p>
             </div>
           </div>

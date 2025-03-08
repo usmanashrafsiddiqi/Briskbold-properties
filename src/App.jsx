@@ -7,6 +7,8 @@ import Testimonials from "./components/Testimonials"
 import Footer from "./components/Footer"
 import ComingSoon from "./components/ComingSoon"
 import TagManager from "react-gtm-module"
+import WhatsAppChat from "./components/WhatsAppChat"
+
 function App() {
 
   const gtmInd = {
@@ -27,6 +29,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
+      <WhatsAppChat/>
 
     </div>
 

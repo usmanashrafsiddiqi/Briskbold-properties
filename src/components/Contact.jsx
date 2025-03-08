@@ -144,10 +144,10 @@ export const Contact = () => {
           If you want to contact us, email us at
           <br />
           <a
-            href="mailto:info@briskboldit.com"
+            href="mailto:bbpmarketing@briskboldproperties.com"
             className="text-white-500 font-semibold"
           >
-            info@briskboldit.com
+            bbpmarketing@briskboldproperties.com
           </a>
         </p>
 
