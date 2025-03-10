@@ -38,32 +38,32 @@ const Navbar = () => {
                     {/* Navbar items with white background */}
                     <a
                         href="#Header"
-                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300'
+                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300 nav_link'
                     >
                         Home
                     </a>
                     <a
                         href="#About"
-                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300'
+                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300 nav_link'
                     >
                         About
                     </a>
                     <a
                         href="#Projects"
-                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300'
+                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300 nav_link'
                     >
                         Projects
                     </a>
                     <a
                         href="#Testimonials"
-                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300'
+                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300 nav_link'
                     >
                         Testimonials
                     </a>
                     {/* Contact Us with white background */}
                     <a
                         href="#contact"
-                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300'
+                        className='cursor-pointer hover:bg-gray-200 text-black bg-white px-6 py-2 rounded-full text-sm transition-all duration-300 nav_link'
                         onClick={scrollToContact}
                     >
                         Contact Us
