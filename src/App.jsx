@@ -1,16 +1,18 @@
-
-import Header from "./components/Header"
-import About from "./components/About"
-import Projects from "./components/Projects"
-import { Contact } from "./components/Contact"
-import Testimonials from "./components/Testimonials"
-import Footer from "./components/Footer"
-import ComingSoon from "./components/ComingSoon"
-import TagManager from "react-gtm-module"
-import WhatsAppChat from "./components/WhatsAppChat"
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import { Contact } from "./components/Contact";
+import Testimonials from "./components/Testimonials";
+import Footer from "./components/Footer";
+import ComingSoon from "./components/ComingSoon";
+import TagManager from "react-gtm-module";
+import WhatsAppChat from "./components/WhatsAppChat";
+import Crypto from "./components/Crypto"; // Import Crypto page
+import Event from "./components/Event"; // Import Crypto page
+import EventDetail from "./components/EventDetail"; // Import Crypto page
+import BlogDetail from './components/BlogDetail'
 function App() {
-
   const gtmInd = {
     gtmId: "GTM-TTTFQR6S",
   };
@@ -18,24 +20,33 @@ function App() {
   TagManager.initialize(gtmInd);
 
   return (
-
-
-    <div className="w-full overflow-hidden">
-
-      <Header />
-      <Projects />
-      <ComingSoon />
-      <About />
-      <Testimonials />
-      <Contact />
-      <Footer />
-      <WhatsAppChat/>
-
-    </div>
-
-
-
-  )
+    <Router>
+      <Routes>
+        {/* Main App Content */}
+        <Route
+          path="/"
+          element={
+            <div className="w-full overflow-hidden">
+              <Header />
+              <Projects />
+              <ComingSoon />
+              <About />
+              <Testimonials />
+              <Contact />
+              <Footer />
+              <WhatsAppChat />
+            </div>
+          }
+        />
+        
+        {/* Crypto Page Route */}
+        <Route path="/crypto" element={<Crypto />} />
+        <Route path="/events" element={<Event />} />
+        <Route path="/event/:id" element={<EventDetail />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
