@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 const events = [
-    { id: 1, title: "Dubai Blockchain Summit", image: "/images/event1.jpg" },
-    { id: 2, title: "Luxury Property Expo", image: "/images/event2.jpg" },
-    { id: 3, title: "Crypto & Real Estate Panel", image: "/images/event3.jpg" },
-    { id: 4, title: "Investment Strategies 2025", image: "/images/event4.jpg" },
-    { id: 5, title: "Digital Asset Conference", image: "/images/event5.jpg" },
+    { id: 1, title: "Binghatti Developers Hosts Dubai'sLargest Private Property Show of 2024 ", image: "/mainpic.jpg" },
+    { id: 2, title: "International Property Show 2024", image: "/event 5.jpg" },
+    { id: 3, title: "Crypto & Real Estate Panel", image: "/event 3.jpg" },
+    { id: 4, title: "Investment Strategies 2025", image: "/event4.jpg" },
+   
 ];
 
 const blogs = [

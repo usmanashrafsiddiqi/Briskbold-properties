@@ -8,16 +8,23 @@ import Footer from "./components/Footer";
 import ComingSoon from "./components/ComingSoon";
 import TagManager from "react-gtm-module";
 import WhatsAppChat from "./components/WhatsAppChat";
-import Crypto from "./components/Crypto"; // Import Crypto page
-import Event from "./components/Event"; // Import Crypto page
-import EventDetail from "./components/EventDetail"; // Import Crypto page
-import BlogDetail from './components/BlogDetail'
+import Crypto from "./components/Crypto"; 
+import Event from "./components/Event"; 
+import EventDetail from "./components/EventDetail"; 
+import BlogDetail from './components/BlogDetail';
+
+
+
+
 function App() {
+  
   const gtmInd = {
     gtmId: "GTM-TTTFQR6S",
   };
 
   TagManager.initialize(gtmInd);
+
+
 
   return (
     <Router>

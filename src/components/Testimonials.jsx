@@ -19,7 +19,7 @@ const Testimonials = () => {
             <div className="relative bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-[2px] rounded-lg">
               {/* Frosted Glass Effect with Shiny Border */}
               <div className="relative bg-white bg-opacity-60 p-8 rounded-lg shadow-lg backdrop-blur-lg border-2 border-transparent 
-                border-[3px] 
+                 
                 border-image:linear-gradient(45deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3)) 1 stretch h-[450px] flex flex-col justify-between transition-all duration-500 ease-in-out hover:shadow-2xl hover:shadow-white/60">
                 <img
                   className="w-20 h-20 rounded-full mx-auto mb-4"

@@ -4,12 +4,12 @@ import { ArrowLeft } from "lucide-react";
 
 const eventData = {
     1: {
-        title: "Dubai Blockchain Summit",
-        images: ["/images/event1-1.jpg", "/images/event1-2.jpg", "/images/event1-3.jpg"],
+        title: "Binghatti Developers Hosts Dubai'sLargest Private Property Show of 2024 ",
+        images: ["/event2.jpg", "/event 3.jpg", "/event4.jpg"],
     },
     2: {
-        title: "Luxury Property Expo",
-        images: ["/images/event2-1.jpg", "/images/event2-2.jpg", "/images/event2-3.jpg"],
+        title: "International Property Show 2024",
+        images: ["/event 6.jpg", "/event 7.jpg", "/event 5.jpg"],
     },
     3: {
         title: "Crypto & Real Estate Panel",
