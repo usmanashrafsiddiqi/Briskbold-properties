@@ -14,17 +14,14 @@ const cryptoCoins = [
 const Crypto = () => {
     const navigate = useNavigate();
 
-    // 👇 Optimized Back Navigation
     const handleBack = () => {
-        requestAnimationFrame(() => {
-            navigate("/");
-        });
+        navigate(-1);  // Fast navigation
     };
 
     return (
         <div className="relative min-h-screen overflow-hidden bg-gray-900 text-white">
 
-            {/* 🌌 Animated Gradient Nebula Background */}
+            {/* 🌌 Animated Gradient Background */}
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <motion.div
                     className="absolute w-[200%] h-[200%] bg-gradient-to-r from-fuchsia-600 via-blue-500 to-cyan-400 
@@ -42,46 +39,38 @@ const Crypto = () => {
                 />
             </div>
 
-            {/* 🌫️ Overlay for Contrast */}
-            <div className="absolute inset-0 bg-black/70 z-0"></div>
-
-            {/* 🌟 Floating Particles */}
-            <div className="absolute inset-0 pointer-events-none z-10">
-                {Array.from({ length: 50 }).map((_, index) => (
+            {/* ⭐ Star Animation */}
+            <div className="absolute inset-0 z-10 pointer-events-none">
+                {Array.from({ length: 30 }).map((_, index) => (
                     <motion.div
                         key={index}
-                        className="absolute w-2 h-2 bg-white/60 rounded-full shadow-lg"
+                        className="absolute bg-white rounded-full"
                         style={{
+                            width: `${Math.random() * 4 + 2}px`,
+                            height: `${Math.random() * 4 + 2}px`,
                             top: `${Math.random() * 100}vh`,
                             left: `${Math.random() * 100}vw`,
-                            animationDuration: `${Math.random() * 10 + 5}s`,
+                            opacity: Math.random() * 0.8 + 0.2,
                         }}
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: [0, 1, 0], y: ["0%", "100%"] }}
-                        transition={{ repeat: Infinity, duration: 6 + Math.random() * 10 }}
+                        animate={{ 
+                            opacity: [0, 1, 0], 
+                            scale: [1, 1.5, 1] 
+                        }}
+                        transition={{
+                            repeat: Infinity,
+                            duration: Math.random() * 5 + 3,
+                            ease: "easeInOut",
+                            delay: Math.random() * 3
+                        }}
                     />
                 ))}
             </div>
 
-            {/* 🌊 Ripple Waves */}
-            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <motion.div
-                    className="absolute w-[120%] h-[120%] bg-gradient-to-t from-blue-400 via-transparent to-transparent 
-                    opacity-20 blur-[150px] animate-pulse"
-                    initial={{ x: "-50%", y: "-50%" }}
-                    animate={{ x: "50%", y: "50%" }}
-                    transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-                />
-                <motion.div
-                    className="absolute w-[130%] h-[130%] bg-gradient-to-b from-purple-400 via-transparent to-transparent 
-                    opacity-25 blur-[150px] animate-pulse"
-                    initial={{ x: "50%", y: "50%" }}
-                    animate={{ x: "-40%", y: "-30%" }}
-                    transition={{ repeat: Infinity, duration: 10, ease: "easeInOut" }}
-                />
-            </div>
+            {/* 🌫️ Overlay for Contrast */}
+            <div className="absolute inset-0 bg-black/70 z-0"></div>
 
-            {/* 🔙 Optimized Back Button */}
+            {/* 🔙 Back Button */}
             <div className="relative z-50 pointer-events-auto">
                 <button
                     onClick={handleBack}
@@ -94,7 +83,7 @@ const Crypto = () => {
 
             {/* 💎 Content Container */}
             <div className="relative z-20 flex flex-col items-center justify-center min-h-screen text-center px-6 py-12">
-                
+
                 {/* 🌐 Crypto Coins */}
                 <div className="flex gap-6 mt-10 flex-wrap justify-center">
                     {cryptoCoins.map((coin, index) => (
