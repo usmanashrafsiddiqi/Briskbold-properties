@@ -35,8 +35,8 @@ const locations = [
       'Honchome 3-3-6, Chuo-ku',
       'Tokyo, Japan',
     ],
-    mobile: '(+81) 8034365974',
-    whatsapp: '(+81) 8034365974',
+    mobile: '(+81)7036162428',
+    whatsapp: '(+81)7036162428',
     img: japanimg,
   },
   {
