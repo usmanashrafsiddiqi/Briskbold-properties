@@ -6,6 +6,8 @@ import { ArrowLeft } from "lucide-react";
 
 
 
+
+
 const cryptoCoins = [
     { name: "Bitcoin", img: "c1.png" },
     { name: "Ethereum", img: "c2.png" },
@@ -15,6 +17,22 @@ const cryptoCoins = [
 ];
 
 const Crypto = () => {
+    //added new
+const [usdAmount, setUsdAmount] = useState('');
+const [btcAmount, setBtcAmount] = useState(null);
+
+
+//added new
+const BTC_RATE = 0.000025; // Example rate: 1 USD = 0.000025 BTC
+
+const handleConvert = () => {
+    const usd = parseFloat(usdAmount);
+    if (!isNaN(usd)) {
+        setBtcAmount((usd * BTC_RATE).toFixed(6)); // 6 decimal places
+    } else {
+        setBtcAmount(null);
+    }
+};
     const navigate = useNavigate();
     const [firstLoad, setFirstLoad] = useState(true);
 
@@ -93,6 +111,19 @@ const Crypto = () => {
                     animate={{ opacity: [0.5, 0.7, 0.5] }}
                     transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
                 />
+      {/* 🔥 Permanent Callout Quote with Glow Effect */}
+<div className="relative mt-12 p-8 rounded-lg bg-gray-800 shadow-lg 
+    border-l-4 border-blue-500 w-full max-w-full mx-auto 
+    scale-105 transition-transform transform">
+    
+    <blockquote className="text-2xl font-bold italic text-gray-200">
+        "Invest in Dubai with the currency of the <span className="text-blue-400">future</span>."
+    </blockquote>
+
+    <div className="absolute inset-0 rounded-lg opacity-100 transition-opacity 
+        bg-gradient-to-r from-blue-500 to-purple-600 blur-lg z-[-1]"></div>
+</div>
+
 
                 {/* 🌐 Crypto Coins */}
                 <div className="relative z-20 flex gap-6 mt-10 flex-wrap justify-center">
@@ -162,7 +193,6 @@ const Crypto = () => {
         ))}
     </div>
 </div>
-
 {/* ✅ Crypto Conversion Calculator */}
 <div className="py-20 px-6 text-center bg-gray-900">
     <h2 className="text-4xl font-bold mb-12 text-white">🔄 Crypto Conversion Calculator</h2>
@@ -175,18 +205,25 @@ const Crypto = () => {
         <input
             type="number"
             placeholder="Enter amount in USD"
+            value={usdAmount}
+            onChange={(e) => setUsdAmount(e.target.value)}
             className="w-full p-3 rounded-md bg-transparent text-white mb-4
             border border-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
         />
 
-        <button className="w-full py-3 bg-blue-600 rounded-md 
-            hover:bg-blue-700 transition-all">
+        <button 
+            onClick={handleConvert}
+            className="w-full py-3 bg-blue-600 rounded-md 
+            hover:bg-blue-700 transition-all text-white font-medium"
+        >
             Convert
         </button>
 
-        <p className="mt-4 text-lg text-gray-300">
-            Equivalent in BTC: <span className="text-green-400">0.025 BTC</span>
-        </p>
+        {btcAmount !== null && (
+            <p className="mt-4 text-lg text-gray-300">
+                Equivalent in BTC: <span className="text-green-400">{btcAmount} BTC</span>
+            </p>
+        )}
     </div>
 </div>
 
@@ -230,18 +267,19 @@ const Crypto = () => {
         making a smart investment, <strong>Dubai welcomes your crypto journey.</strong>
     </p>
 
-    {/* 🔥 Permanent Callout Quote with Glow Effect */}
-    <div className="relative mt-12 p-8 rounded-lg bg-gray-800 shadow-lg 
-        border-l-4 border-blue-500 max-w-3xl mx-auto 
-        scale-105 transition-transform transform">
-        
-        <blockquote className="text-2xl font-bold italic text-gray-200">
-            "Invest in Dubai with the currency of the <span className="text-blue-400">future</span>."
-        </blockquote>
+{/* 🔥 Permanent Callout Quote with Glow Effect */}
+<div className="relative mt-12 p-8 rounded-lg bg-gray-800 shadow-lg 
+    border-l-4 border-blue-500 w-full max-w-full mx-auto 
+    scale-105 transition-transform transform">
+    
+    <blockquote className="text-2xl font-bold italic text-gray-200">
+        "Crypto is where innovation meets opportunity."
+    </blockquote>
 
-        <div className="absolute inset-0 rounded-lg opacity-100 transition-opacity 
-            bg-gradient-to-r from-blue-500 to-purple-600 blur-lg z-[-1]"></div>
-    </div>
+    <div className="absolute inset-0 rounded-lg opacity-100 transition-opacity 
+        bg-gradient-to-r from-blue-500 to-purple-600 blur-lg z-[-1]"></div>
+</div>
+
 </div>
 
 

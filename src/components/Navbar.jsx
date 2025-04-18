@@ -16,11 +16,20 @@ const Navbar = () => {
         }
     };
 
-    return (
-        <div className="fixed top-0 left-0 w-full z-50 bg-transparent">
-            <div className="w-full flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-28">
+    const navItems = [
+        { name: "Home", href: "#Header" },
+        { name: "About", href: "#About" },
+        { name: "Projects", href: "#Projects" },
+        { name: "Crypto", href: "/crypto" },
+        { name: "Events", href: "/events" },
+        { name: "Testimonials", href: "#Testimonials" },
+        { name: "Contact Us", href: "#contact", onClick: scrollToContact }
+    ];
 
-                {/* 🌟 Logo on the extreme left */}
+    return (
+        <div className="fixed top-0 left-0 w-full z-50 bg-[#2a2a3d]">
+            <div className="w-full flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-28">
+                {/* 🌟 Logo */}
                 <div className="flex items-center">
                     <a href="#Header" className="flex-shrink-0">
                         <img
@@ -31,34 +40,21 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                {/* 🌐 Desktop Navigation (hidden below 900px) */}
+                {/* 🌐 Desktop Navigation */}
                 <ul className="hidden lg:flex items-center gap-4 xl:gap-8 ml-auto">
-                    {[
-                        { name: "Home", href: "#Header" },
-                        { name: "About", href: "#About" },
-                        { name: "Projects", href: "#Projects" },
-                        { name: "Testimonials", href: "#Testimonials" },
-                        { name: "Contact Us", href: "#contact", onClick: scrollToContact },
-                        { name: "Crypto", href: "/crypto", gradient: true },
-                        { name: "Events", href: "/events", gradient: true }
-                    ].map((item, index) => (
+                    {navItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.href}
                             onClick={item.onClick}
-                            className={`px-4 lg:px-5 xl:px-6 py-2 rounded-full text-sm font-medium transition-all duration-300
-                                ${item.gradient
-                                    ? "bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white"
-                                    : "bg-white text-black hover:bg-gray-200"
-                                }`
-                            }
+                            className="w-40 text-center px-4 lg:py-3 xl:py-3.5 rounded-full text-xl lg:text-2xl font-normal text-white bg-[#2a2a3d] hover:bg-[#1f1f30] transition-all duration-300"
                         >
                             {item.name}
                         </a>
                     ))}
                 </ul>
 
-                {/* 📱 Mobile Menu Icon (visible at 900px and below) */}
+                {/* 📱 Mobile Menu Icon */}
                 <img
                     onClick={() => setshowmobilemenu(true)}
                     src={assets.menu_icon}
@@ -67,7 +63,7 @@ const Navbar = () => {
                 />
             </div>
 
-            {/* 📱 Mobile & Tablet Menu (below 900px) */}
+            {/* 📱 Mobile Menu */}
             <div className={`fixed inset-0 z-40 bg-black/80 transition-transform duration-500 ${showmobilemenu ? "translate-x-0" : "translate-x-full"}`}>
                 <div className="flex justify-end p-4 sm:p-6">
                     <img
@@ -78,22 +74,13 @@ const Navbar = () => {
                     />
                 </div>
 
-                <ul className="flex flex-col items-center gap-6 mt-8 text-lg font-bold text-white">
-                    {[
-                        { name: "Home", href: "#Header" },
-                        { name: "About", href: "#About" },
-                        { name: "Projects", href: "#Projects" },
-                        { name: "Testimonials", href: "#Testimonials" },
-                        { name: "Contact Us", href: "#contact", onClick: scrollToContact },
-                        { name: "Crypto", href: "/crypto" },
-                        { name: "Events", href: "/events" }
-                    ].map((item, index) => (
+                <ul className="flex flex-col items-center gap-6 mt-8 text-xl font-normal">
+                    {navItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.href}
                             onClick={() => { setshowmobilemenu(false); item.onClick?.(); }}
-                            className="px-8 py-4 rounded-full bg-white text-black shadow-lg hover:scale-105 
-                                hover:bg-purple-500 transition-all duration-300"
+                            className="w-36 text-center px-8 py-4 rounded-full text-xl font-normal text-white bg-[#2a2a3d] hover:bg-[#1f1f30] transition-all duration-300"
                         >
                             {item.name}
                         </a>
