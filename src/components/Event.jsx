@@ -7,8 +7,8 @@ import Footer from "./Footer";
 const events = [
   {
     id: 1,
-    title: "Binghatti Developers Hosts Dubai's Largest Private Property Show of 2024",
-    image: "/mainpic.jpg",
+    title: "Tokyo Hosts BriskBold’s Dubai Property Showcase",
+    image: "/japan1.jpg",
   },
   { id: 2, title: "International Property Show 2024", image: "/event 5.jpg" },
   { id: 3, title: "Crypto & Real Estate Panel", image: "/event 3.jpg" },
