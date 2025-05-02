@@ -17,7 +17,8 @@
     "react-gtm-module": "^2.0.11",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.3.0",
-    "react-whatsapp-widget": "^2.2.0"
+    "react-whatsapp-widget": "^2.2.0",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

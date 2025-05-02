@@ -1,46 +1,42 @@
 import React from 'react';
-import { assets, testimonialsData } from '../assets/assets';
+import { testimonialsData } from '../assets/assets';
 
 const Testimonials = () => {
   return (
-    <div className="w-full py-10 lg:px-32 overflow-hidden bg-white px-0 pb-16" id="Testimonials">
-      <h1 className="text-2xl sm:text-4xl font-bold mb-2 text-center">
-        Customer <span className="underline underline-offset-4 decoration-1 under font-light">Testimonials</span>
-      </h1>
-      <p className="text-center text-black-500 mb-12 max-w-80 mx-auto">Real stories from Those Who Found Home with Us</p>
+    <div
+      className="w-full py-12 px-6 lg:px-24 bg-[#e6f3f2] flex flex-col lg:flex-row items-center gap-12"
+      id="Testimonials"
+    >
+      {/* Left Section - Centered Design */}
+      <div className="lg:w-1/2 text-center">
+        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0d4752] to-[#105561] mb-6 leading-tight">
+          What Our Customers Say
+        </h1>
+        <p className="text-lg text-[#0d4752] max-w-xl mx-auto font-medium leading-relaxed">
+          Hear directly from the families and individuals who found their perfect space with us. Your satisfaction is our greatest achievement—thank you for being a part of our journey.
+        </p>
+      </div>
 
-      {/* Testimonial Container */}
-      <div className="flex flex-col items-center sm:flex-row flex-wrap justify-center gap-8 lg:gap-12">
+      {/* Right Section - Testimonials */}
+      <div className="lg:w-1/2 flex flex-col gap-6 items-center">
         {testimonialsData.map((testimonial, index) => (
           <div
             key={index}
-            className="flex-1 max-w-[340px] w-full sm:w-1/2 lg:w-1/3"
+            className="w-full max-w-xl bg-[#0d4752cc] text-white rounded-[3rem] px-10 py-4 shadow-2xl border border-[#0d4752] transition-transform hover:scale-[1.02]"
           >
-            <div className="relative bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-[2px] rounded-lg">
-              {/* Frosted Glass Effect with Shiny Border */}
-              <div className="relative bg-white bg-opacity-60 p-8 rounded-lg shadow-lg backdrop-blur-lg border-2 border-transparent 
-                 
-                border-image:linear-gradient(45deg, rgba(255,255,255,0.7), rgba(255,255,255,0.3)) 1 stretch h-[450px] flex flex-col justify-between transition-all duration-500 ease-in-out hover:shadow-2xl hover:shadow-white/60">
-                <img
-                  className="w-20 h-20 rounded-full mx-auto mb-4"
-                  src={testimonial.image}
-                  alt={testimonial.alt}
-                />
-
-                {/* Name and Star rating */}
-                <div className="flex flex-col justify-center items-center text-center">
-                  <h2 className="text-xl text-black font-medium">{testimonial.name}</h2>
-
-                  {/* Star rating aligned to the center */}
-                  <div className="flex justify-center gap-1 text-yellow-500 mb-4">
-                    {Array.from({ length: testimonial.rating }, (items, index) => {
-                      return <img key={index} src={assets.star_icon} alt="" />;
-                    })}
-                  </div>
-                </div>
-
-                <p className="text-black flex-1">{testimonial.text}</p>
+            <div className="flex flex-col items-center text-center gap-3">
+              <img
+                className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
+                src={testimonial.image}
+                alt={testimonial.alt}
+              />
+              <h2 className="text-xl font-semibold">{testimonial.name}</h2>
+              <div className="flex justify-center gap-1 text-yellow-400">
+                {Array.from({ length: testimonial.rating }, (_, i) => (
+                  <span key={i}>⭐</span>
+                ))}
               </div>
+              <p className="text-sm font-medium leading-relaxed">{testimonial.text}</p>
             </div>
           </div>
         ))}

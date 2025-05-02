@@ -8,29 +8,22 @@ import Footer from "./components/Footer";
 import ComingSoon from "./components/ComingSoon";
 import TagManager from "react-gtm-module";
 import WhatsAppChat from "./components/WhatsAppChat";
-import Crypto from "./components/Crypto"; 
-import Event from "./components/Event"; 
-import EventDetail from "./components/EventDetail"; 
+import Crypto from "./components/Crypto";
+import Event from "./components/Event";
+import EventDetail from "./components/EventDetail";
 import BlogDetail from './components/BlogDetail';
-
-
-
+import Properties from "./components/Properties"; // ✅ Import added
 
 function App() {
-  
   const gtmInd = {
     gtmId: "GTM-TTTFQR6S",
   };
 
   TagManager.initialize(gtmInd);
 
-
-
   return (
     <Router>
       <Routes>
-        {/* Main App Content */}
-
         <Route
           path="/"
           element={
@@ -46,8 +39,11 @@ function App() {
             </div>
           }
         />
-        
-        {/* Crypto Page Route */}
+
+        {/* ✅ New Route */}
+        <Route path="/properties" element={<Properties />} />
+
+        {/* Other Routes */}
         <Route path="/crypto" element={<Crypto />} />
         <Route path="/events" element={<Event />} />
         <Route path="/event/:id" element={<EventDetail />} />

@@ -25,7 +25,13 @@ const Header = () => {
         </h2>
         <div className='space-x-6 mt-16'>
           <a href="#Projects" className='border border-white px-8 py-3 rounded'>Projects</a>
-          <a href="#contact" className='bg-gradient-to-r from-blue-500 to-pink-500 text-white px-8 py-3 rounded'>Contact us</a>
+          <a 
+  href="#contact" 
+  className="bg-gradient-to-r from-[#0d4752] to-[#105561] text-white px-8 py-3 rounded"
+>
+  Contact us
+</a>
+
         </div>
       </div>
     </div>

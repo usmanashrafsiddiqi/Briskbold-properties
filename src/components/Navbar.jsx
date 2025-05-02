@@ -27,7 +27,12 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="fixed top-0 left-0 w-full z-50 bg-[#2a2a3d]">
+        <div
+            className="fixed top-0 left-0 w-full z-50"
+            style={{
+                background: "linear-gradient(to right, #0d4752, #105561)",
+            }}
+        >
             <div className="w-full flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-28">
                 {/* 🌟 Logo */}
                 <div className="flex items-center">
@@ -47,7 +52,7 @@ const Navbar = () => {
                             key={index}
                             href={item.href}
                             onClick={item.onClick}
-                            className="w-40 text-center px-4 lg:py-3 xl:py-3.5 rounded-full text-xl lg:text-2xl font-normal text-white bg-[#2a2a3d] hover:bg-[#1f1f30] transition-all duration-300"
+                            className="w-40 text-center px-4 lg:py-3 xl:py-3.5 rounded-full text-xl lg:text-2xl font-normal text-white bg-white/10 transition-all duration-300"
                         >
                             {item.name}
                         </a>
@@ -80,7 +85,7 @@ const Navbar = () => {
                             key={index}
                             href={item.href}
                             onClick={() => { setshowmobilemenu(false); item.onClick?.(); }}
-                            className="w-36 text-center px-8 py-4 rounded-full text-xl font-normal text-white bg-[#2a2a3d] hover:bg-[#1f1f30] transition-all duration-300"
+                            className="w-36 text-center px-8 py-4 rounded-full text-xl font-normal text-white bg-white/10 transition-all duration-300"
                         >
                             {item.name}
                         </a>
