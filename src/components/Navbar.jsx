@@ -45,14 +45,14 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                {/* 🌐 Desktop Navigation */}
-                <ul className="hidden lg:flex items-center gap-4 xl:gap-8 ml-auto">
+                {/* 🌐 Desktop Navigation - Smaller consistent buttons */}
+                <ul className="hidden lg:flex items-center gap-2 xl:gap-3 ml-auto flex-nowrap">
                     {navItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.href}
                             onClick={item.onClick}
-                            className="w-40 text-center px-4 lg:py-3 xl:py-3.5 rounded-full text-xl lg:text-2xl font-normal text-white bg-white/10 transition-all duration-300"
+                            className="w-[110px] text-center px-2 py-1 text-sm xl:text-base font-normal text-white bg-white/10 rounded-full transition-all duration-300"
                         >
                             {item.name}
                         </a>
