@@ -3,43 +3,42 @@ import { testimonialsData } from '../assets/assets';
 
 const Testimonials = () => {
   return (
-    <div
-      className="w-full py-12 px-6 lg:px-24 bg-[#e6f3f2] flex flex-col lg:flex-row items-center gap-12"
-      id="Testimonials"
-    >
-      {/* Left Section - Centered Design */}
-      <div className="lg:w-1/2 text-center">
-        <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#0d4752] to-[#105561] mb-6 leading-tight">
-          What Our Customers Say
-        </h1>
-        <p className="text-lg text-[#0d4752] max-w-xl mx-auto font-medium leading-relaxed">
-          Hear directly from the families and individuals who found their perfect space with us. Your satisfaction is our greatest achievement—thank you for being a part of our journey.
-        </p>
-      </div>
+    <div id="Testimonials"  className="py-20 px-6 lg:px-20" style={{ backgroundColor: '#c6e2e0' }}>
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between lg:items-center">
+        {/* Left Text Section */}
+        <div className="lg:w-1/2 mb-10 lg:mb-0 flex flex-col justify-center h-full">
+          <h2 className="text-4xl font-bold text-black mb-4 leading-tight">
+            What Our <br /> Customers Says
+          </h2>
+          <p className="text-gray-700 max-w-md">
+            Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common.
+          </p>
+        </div>
 
-      {/* Right Section - Testimonials */}
-      <div className="lg:w-1/2 flex flex-col gap-6 items-center">
-        {testimonialsData.map((testimonial, index) => (
-          <div
-            key={index}
-            className="w-full max-w-xl bg-[#0d4752cc] text-white rounded-[3rem] px-10 py-4 shadow-2xl border border-[#0d4752] transition-transform hover:scale-[1.02]"
-          >
-            <div className="flex flex-col items-center text-center gap-3">
+        {/* Right Testimonials Section */}
+        <div className="lg:w-1/2 flex flex-col gap-6">
+          {testimonialsData.map((item, idx) => (
+            <div
+              key={idx}
+              className={`relative bg-white rounded-xl px-6 py-5 shadow-md flex items-start gap-4 ${
+                idx === 1 ? 'border-l-4 border-[#7a5af8] -ml-4' : ''
+              }`}
+            >
               <img
-                className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-md"
-                src={testimonial.image}
-                alt={testimonial.alt}
+                src={item.image}
+                alt={item.alt}
+                className="w-12 h-12 rounded-full object-cover"
               />
-              <h2 className="text-xl font-semibold">{testimonial.name}</h2>
-              <div className="flex justify-center gap-1 text-yellow-400">
-                {Array.from({ length: testimonial.rating }, (_, i) => (
-                  <span key={i}>⭐</span>
-                ))}
+              <div>
+                <h4 className="font-semibold text-gray-800">{item.name}</h4>
+                <p className="text-sm text-gray-500">{item.text}</p>
               </div>
-              <p className="text-sm font-medium leading-relaxed">{testimonial.text}</p>
+              {idx === 1 && (
+                <span className="absolute top-2 right-4 text-[#7a5af8] text-xl font-bold">””</span>
+              )}
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

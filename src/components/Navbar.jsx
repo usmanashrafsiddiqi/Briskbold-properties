@@ -3,6 +3,7 @@ import { assets } from "../assets/assets";
 
 const Navbar = () => {
     const [showmobilemenu, setshowmobilemenu] = useState(false);
+    const [activeLink, setActiveLink] = useState("Home");
 
     useEffect(() => {
         document.body.style.overflow = showmobilemenu ? "hidden" : "auto";
@@ -26,6 +27,12 @@ const Navbar = () => {
         { name: "Contact Us", href: "#contact", onClick: scrollToContact }
     ];
 
+    const handleClick = (name, onClick) => {
+        setActiveLink(name);
+        if (onClick) onClick();
+        setshowmobilemenu(false);
+    };
+
     return (
         <div
             className="fixed top-0 left-0 w-full z-50"
@@ -34,7 +41,7 @@ const Navbar = () => {
             }}
         >
             <div className="w-full flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-28">
-                {/* 🌟 Logo */}
+                {/* Logo */}
                 <div className="flex items-center">
                     <a href="#Header" className="flex-shrink-0">
                         <img
@@ -45,21 +52,23 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                {/* 🌐 Desktop Navigation - Smaller consistent buttons */}
+                {/* Desktop Navigation */}
                 <ul className="hidden lg:flex items-center gap-2 xl:gap-3 ml-auto flex-nowrap">
                     {navItems.map((item, index) => (
                         <a
                             key={index}
                             href={item.href}
-                            onClick={item.onClick}
-                            className="w-[110px] text-center px-2 py-1 text-sm xl:text-base font-normal text-white bg-white/10 rounded-full transition-all duration-300"
+                            onClick={() => handleClick(item.name, item.onClick)}
+                            className={`w-[110px] text-center px-2 py-1 text-sm xl:text-base font-normal rounded-full transition-all duration-300 ${
+                                activeLink === item.name ? 'bg-[#c6e2e0] text-black' : 'text-white bg-white/10'
+                            }`}
                         >
                             {item.name}
                         </a>
                     ))}
                 </ul>
 
-                {/* 📱 Mobile Menu Icon */}
+                {/* Mobile Menu Icon */}
                 <img
                     onClick={() => setshowmobilemenu(true)}
                     src={assets.menu_icon}
@@ -68,7 +77,7 @@ const Navbar = () => {
                 />
             </div>
 
-            {/* 📱 Mobile Menu */}
+            {/* Mobile Menu */}
             <div className={`fixed inset-0 z-40 bg-black/80 transition-transform duration-500 ${showmobilemenu ? "translate-x-0" : "translate-x-full"}`}>
                 <div className="flex justify-end p-4 sm:p-6">
                     <img
@@ -84,8 +93,10 @@ const Navbar = () => {
                         <a
                             key={index}
                             href={item.href}
-                            onClick={() => { setshowmobilemenu(false); item.onClick?.(); }}
-                            className="w-36 text-center px-8 py-4 rounded-full text-xl font-normal text-white bg-white/10 transition-all duration-300"
+                            onClick={() => handleClick(item.name, item.onClick)}
+                            className={`w-36 text-center px-8 py-4 rounded-full text-xl font-normal transition-all duration-300 ${
+                                activeLink === item.name ? 'bg-[#c6e2e0] text-black' : 'text-white bg-white/10'
+                            }`}
                         >
                             {item.name}
                         </a>
