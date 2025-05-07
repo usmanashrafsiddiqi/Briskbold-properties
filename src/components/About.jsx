@@ -13,7 +13,7 @@ const About = () => {
       {/* Hero Section */}
       <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden">
         <img
-          src="/AB.jpg"
+          src="/aboutt.jpg"
           alt="About"
           className="w-full h-full object-cover"
         />

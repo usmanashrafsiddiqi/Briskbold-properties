@@ -3,12 +3,32 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from 'react
 
 const Footer = () => {
   return (
-    <div className="text-black py-8 relative w-full mt-0" style={{ backgroundColor: '#c6e2e0' }}>
-      <div className="max-w-screen-lg mx-auto">
-        {/* Quick Links Section */}
+    <div className="w-full bg-[#f0faf9] text-black mt-0 pt-0">
+      {/* Embedded Google Map */}
+      <div className="w-full flex justify-center py-6">
+        <div className="w-full max-w-screen-lg rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            title="BriskBold Properties Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.6417543176162!2d55.26689677154324!3d25.181571583117616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f699170ef3bc5%3A0x80b86613189c5d48!2sBRISKBOLD%20PROPERTIES!5e0!3m2!1sen!2sin!4v1746619227028!5m2!1sen!2sin"
+            width="100%"
+            height="250"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+
+      {/* Footer Content */}
+      <div className="max-w-screen-lg mx-auto pt-8 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
+          
+          {/* Quick Links */}
           <div className="mr-6">
-            <h2 className="text-2xl font-bold mb-2">Quick Links</h2>
+            <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#0d4752] to-[#105561] bg-clip-text text-transparent">
+              Quick Links
+            </h2>
             <div>
               <a href="#Header" className="block mb-1 hover:text-blue-400">Home</a>
               <a href="#About" className="block mb-1 hover:text-blue-400">About Us</a>
@@ -17,9 +37,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Contact Us Section */}
+          {/* Contact Us */}
           <div className="mr-6">
-            <h2 className="text-2xl font-bold mb-2">Contact Us</h2>
+            <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#0d4752] to-[#105561] bg-clip-text text-transparent">
+              Contact Us
+            </h2>
             <div>
               <p className="mb-1">Email: bbpmarketing@briskboldproperties.com</p>
               <p className="mb-1">Phone: (+971) 56 924 2326</p>
@@ -27,54 +49,59 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Subscribe Section */}
+          {/* Newsletter Subscription */}
           <div className="mr-6">
-            <h2 className="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h2>
-            <div className="flex items-center mt-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="p-2 w-full max-w-xs bg-white text-black border border-black rounded-l-md"
-              />
-              <button className="bg-gradient-to-r from-blue-500 to-pink-500 text-white p-2 rounded-r-md transition-colors duration-300 hover:bg-gradient-to-l">
-                Subscribe
-              </button>
-            </div>
+            <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#0d4752] to-[#105561] bg-clip-text text-transparent">
+              Subscribe to Our Newsletter
+            </h2>
+            <div className="flex items-stretch mt-2">
+  <input
+    type="email"
+    placeholder="Enter your email"
+    className="p-2 w-full max-w-xs bg-white text-black border border-black rounded-l-md"
+  />
+  <button
+    className="px-4 bg-gradient-to-r from-[#0d4752] to-[#105561] text-white rounded-r-md hover:bg-[#c6e2e0] hover:text-[#0d4752] border border-black transition-all duration-300"
+  >
+    Subscribe
+  </button>
+</div>
+
           </div>
         </div>
 
-        {/* Social Media Section */}
+        {/* Social Media Icons */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
             <a href="https://www.facebook.com/profile.php?id=61573128565466&sk=about_details" target="_blank" rel="noopener noreferrer">
-              <button className="p-1 hover:text-blue-500 transition-colors duration-200">
+              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-blue-400 transition-colors duration-200">
                 <FaFacebook size={24} />
               </button>
             </a>
             <a href="https://x.com/BB_Properties01" target="_blank" rel="noopener noreferrer">
-              <button className="p-1 hover:text-blue-500 transition-colors duration-200">
+              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-blue-400 transition-colors duration-200">
                 <FaTwitter size={24} />
               </button>
             </a>
             <a href="https://www.linkedin.com/company/106345715/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-              <button className="p-1 hover:text-blue-500 transition-colors duration-200">
+              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-blue-400 transition-colors duration-200">
                 <FaLinkedin size={24} />
               </button>
             </a>
             <a href="https://youtube.com/@briskboldproperties01?si=luUiLXnThAXfwNJL" target="_blank" rel="noopener noreferrer">
-              <button className="p-1 hover:text-red-500 transition-colors duration-200">
+              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-red-500 transition-colors duration-200">
                 <FaYoutube size={24} />
               </button>
             </a>
             <a href="https://www.instagram.com/brisk_boldproperties" target="_blank" rel="noopener noreferrer">
-              <button className="p-1 hover:text-pink-500 transition-colors duration-200">
+              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-pink-500 transition-colors duration-200">
                 <FaInstagram size={24} />
               </button>
             </a>
           </div>
         </div>
 
-        {/* Copyright Section */}
+        {/* Copyright */}
         <div className="mt-8 text-center">
           <p className="text-sm">
             &copy; {new Date().getFullYear()} — BriskBold-Properties
