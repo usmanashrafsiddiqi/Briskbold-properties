@@ -18,8 +18,7 @@ const Properties = () => {
   });
 
   return (
-    <div className="px-4 py-6 md:px-16 lg:px-24 bg-[#e6f3f2] min-h-screen">
-      
+    <div className="pt-28 px-4 py-6 md:px-16 lg:px-24 bg-[#e6f3f2] min-h-screen">
       {/* Fixed Back Button */}
       <button
         onClick={() => navigate('/')}
@@ -64,10 +63,7 @@ const Properties = () => {
       </div>
 
       {/* Property Cards */}
-      <motion.div
-        layout
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
-      >
+      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredProjects.length === 0 ? (
           <p className="text-center text-gray-500 col-span-full">No properties found.</p>
         ) : (
@@ -80,11 +76,10 @@ const Properties = () => {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300"
             >
-              {/* Updated Image height */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-80 object-cover" // Increased image height here
+                className="w-full h-80 object-cover"
               />
               <div className="p-4">
                 <h2 className="text-lg font-bold text-gray-800">{project.title}</h2>
