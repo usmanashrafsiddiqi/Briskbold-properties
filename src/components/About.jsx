@@ -11,26 +11,25 @@ const About = () => {
   return (
     <div id="About" className="w-full">
       {/* Hero Section */}
-      <div className="relative w-full h-auto md:h-[70vh] overflow-hidden">
+      <div className="relative w-full h-[70vh] overflow-hidden">
         <img
           src="/aboutt.jpg"
           alt="About"
           className="w-full h-full object-cover"
         />
-       <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6 py-12">
-  <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-  <p className="max-w-2xl mx-auto text-lg md:text-xl mb-6">
-    Passionate About Properties, Dedicated to Your Vision
-  </p>
-  <div className="max-w-4xl mx-auto">
-    <h2 className="text-2xl md:text-3xl font-semibold mb-2">Our Story</h2>
-    <p className="text-base md:text-lg leading-relaxed">
-      BriskBOLD Properties is a leading real estate brokerage firm in the UAE, known for its expertise,
-      professionalism, and commitment to delivering exceptional client experiences.
-    </p>
-  </div>
-</div>
-
+        <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6 py-12">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
+          <p className="max-w-2xl mx-auto text-lg md:text-xl mb-6">
+            Passionate About Properties, Dedicated to Your Vision
+          </p>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-semibold mb-2">Our Story</h2>
+            <p className="text-base md:text-lg leading-relaxed">
+              BriskBOLD Properties is a leading real estate brokerage firm in the UAE, known for its expertise,
+              professionalism, and commitment to delivering exceptional client experiences.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* About Section Content */}
