@@ -11,30 +11,35 @@ const About = () => {
   return (
     <div id="About" className="w-full">
       {/* Hero Section */}
-      <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden">
+      <div className="relative w-full h-auto md:h-[70vh] overflow-hidden">
         <img
           src="/aboutt.jpg"
           alt="About"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Passionate About Properties, Dedicated to Your Vision
-          </p>
-        </div>
+       <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-white text-center px-6 py-12">
+  <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
+  <p className="max-w-2xl mx-auto text-lg md:text-xl mb-6">
+    Passionate About Properties, Dedicated to Your Vision
+  </p>
+  <div className="max-w-4xl mx-auto">
+    <h2 className="text-2xl md:text-3xl font-semibold mb-2">Our Story</h2>
+    <p className="text-base md:text-lg leading-relaxed">
+      BriskBOLD Properties is a leading real estate brokerage firm in the UAE, known for its expertise,
+      professionalism, and commitment to delivering exceptional client experiences.
+    </p>
+  </div>
+</div>
+
       </div>
 
       {/* About Section Content */}
       <div className="py-20 px-6 md:px-20 lg:px-32 bg-white text-gray-800">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-          <p className="max-w-3xl mx-auto text-lg mb-6">
-            <strong>BriskBOLD Properties</strong> is a leading real estate brokerage firm in the UAE, known for its expertise, professionalism, and commitment to delivering exceptional client experiences.
-          </p>
+          <h2 className="text-3xl font-bold mb-6">Who We Are</h2>
           <p className="max-w-3xl mx-auto text-lg">
-            <strong>Who We Are</strong><br />
-            From specializing in off-plan properties to offering end-to-end real estate services across residential, commercial, luxury, and holiday homes, BriskBOLD Properties has evolved to meet the dynamic needs of the market.
+            From specializing in off-plan properties to offering end-to-end real estate services across residential,
+            commercial, luxury, and holiday homes, BriskBOLD Properties has evolved to meet the dynamic needs of the market.
           </p>
         </div>
 

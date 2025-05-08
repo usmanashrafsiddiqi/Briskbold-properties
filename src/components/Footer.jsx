@@ -1,4 +1,6 @@
+// Footer.jsx
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa';
 
 const Footer = () => {
@@ -23,7 +25,6 @@ const Footer = () => {
       {/* Footer Content */}
       <div className="max-w-screen-lg mx-auto pt-8 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
-          
           {/* Quick Links */}
           <div className="mr-6">
             <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#0d4752] to-[#105561] bg-clip-text text-transparent">
@@ -34,6 +35,7 @@ const Footer = () => {
               <a href="#About" className="block mb-1 hover:text-blue-400">About Us</a>
               <a href="#Projects" className="block mb-1 hover:text-blue-400">Projects</a>
               <a href="#contact" className="block mb-1 hover:text-blue-400">Contact Us</a>
+              <Link to="/privacy-policy" className="block mb-1 hover:text-blue-400">Privacy Policy</Link>
             </div>
           </div>
 
@@ -49,63 +51,48 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Newsletter Subscription */}
+          {/* Newsletter */}
           <div className="mr-6">
             <h2 className="text-2xl font-bold mb-2 bg-gradient-to-r from-[#0d4752] to-[#105561] bg-clip-text text-transparent">
               Subscribe to Our Newsletter
             </h2>
             <div className="flex items-stretch mt-2">
-  <input
-    type="email"
-    placeholder="Enter your email"
-    className="p-2 w-full max-w-xs bg-white text-black border border-black rounded-l-md"
-  />
-  <button
-    className="px-4 bg-gradient-to-r from-[#0d4752] to-[#105561] text-white rounded-r-md hover:bg-[#c6e2e0] hover:text-[#0d4752] border border-black transition-all duration-300"
-  >
-    Subscribe
-  </button>
-</div>
-
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="p-2 w-full max-w-xs bg-white text-black border border-black rounded-l-md"
+              />
+              <button
+                className="px-4 bg-gradient-to-r from-[#0d4752] to-[#105561] text-white rounded-r-md hover:bg-[#c6e2e0] hover:text-[#0d4752] border border-black transition-all duration-300"
+              >
+                Subscribe
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Social Media Icons */}
+        {/* Social Icons */}
         <div className="mt-8 text-center">
           <div className="flex justify-center space-x-6">
-            <a href="https://www.facebook.com/profile.php?id=61573128565466&sk=about_details" target="_blank" rel="noopener noreferrer">
-              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-blue-400 transition-colors duration-200">
-                <FaFacebook size={24} />
-              </button>
-            </a>
-            <a href="https://x.com/BB_Properties01" target="_blank" rel="noopener noreferrer">
-              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-blue-400 transition-colors duration-200">
-                <FaTwitter size={24} />
-              </button>
-            </a>
-            <a href="https://www.linkedin.com/company/106345715/admin/dashboard/" target="_blank" rel="noopener noreferrer">
-              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-blue-400 transition-colors duration-200">
-                <FaLinkedin size={24} />
-              </button>
-            </a>
-            <a href="https://youtube.com/@briskboldproperties01?si=luUiLXnThAXfwNJL" target="_blank" rel="noopener noreferrer">
-              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-red-500 transition-colors duration-200">
-                <FaYoutube size={24} />
-              </button>
-            </a>
-            <a href="https://www.instagram.com/brisk_boldproperties" target="_blank" rel="noopener noreferrer">
-              <button className="p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] hover:text-pink-500 transition-colors duration-200">
-                <FaInstagram size={24} />
-              </button>
-            </a>
+            {[
+              { href: "https://www.facebook.com/profile.php?id=61573128565466&sk=about_details", icon: <FaFacebook size={24} />, hover: "hover:text-blue-400" },
+              { href: "https://x.com/BB_Properties01", icon: <FaTwitter size={24} />, hover: "hover:text-blue-400" },
+              { href: "https://www.linkedin.com/company/106345715/admin/dashboard/", icon: <FaLinkedin size={24} />, hover: "hover:text-blue-400" },
+              { href: "https://youtube.com/@briskboldproperties01?si=luUiLXnThAXfwNJL", icon: <FaYoutube size={24} />, hover: "hover:text-red-500" },
+              { href: "https://www.instagram.com/brisk_boldproperties", icon: <FaInstagram size={24} />, hover: "hover:text-pink-500" }
+            ].map((item, idx) => (
+              <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer">
+                <button className={`p-2 text-white rounded-full bg-gradient-to-r from-[#0d4752] to-[#105561] transition-colors duration-200 ${item.hover}`}>
+                  {item.icon}
+                </button>
+              </a>
+            ))}
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 text-center">
-          <p className="text-sm">
-            &copy; {new Date().getFullYear()} — BriskBold-Properties
-          </p>
+        <div className="mt-8 text-center text-sm">
+          <p>&copy; {new Date().getFullYear()} — BriskBold-Properties</p>
         </div>
       </div>
     </div>

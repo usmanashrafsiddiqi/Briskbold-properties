@@ -1,19 +1,42 @@
 import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { assets } from "../assets/assets";
 
 const Navbar = () => {
     const [showmobilemenu, setshowmobilemenu] = useState(false);
     const [activeLink, setActiveLink] = useState("Home");
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
     useEffect(() => {
         document.body.style.overflow = showmobilemenu ? "hidden" : "auto";
         return () => { document.body.style.overflow = "auto"; };
     }, [showmobilemenu]);
 
-    const scrollToContact = () => {
-        const contactSection = document.getElementById("contact");
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: "smooth" });
+    const scrollToHash = (hash) => {
+        const el = document.querySelector(hash);
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+    const handleClick = (name, href, onClick) => {
+        setActiveLink(name);
+        setshowmobilemenu(false);
+
+        // If external route (like /crypto or /events), navigate normally
+        if (href.startsWith("/")) {
+            navigate(href);
+            return;
+        }
+
+        // If already on home page
+        if (location.pathname === "/") {
+            onClick ? onClick() : scrollToHash(href);
+        } else {
+            // Navigate to home page with state
+            navigate("/", { state: { hash: href } });
         }
     };
 
@@ -24,14 +47,8 @@ const Navbar = () => {
         { name: "Crypto", href: "/crypto" },
         { name: "Events", href: "/events" },
         { name: "Testimonials", href: "#Testimonials" },
-        { name: "Contact Us", href: "#contact", onClick: scrollToContact }
+        { name: "Contact Us", href: "#contact", onClick: () => scrollToHash("#contact") }
     ];
-
-    const handleClick = (name, onClick) => {
-        setActiveLink(name);
-        if (onClick) onClick();
-        setshowmobilemenu(false);
-    };
 
     return (
         <div
@@ -41,7 +58,6 @@ const Navbar = () => {
             }}
         >
             <div className="w-full flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-28">
-                {/* Logo */}
                 <div className="flex items-center">
                     <a href="#Header" className="flex-shrink-0">
                         <img
@@ -52,23 +68,20 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                {/* Desktop Navigation */}
                 <ul className="hidden lg:flex items-center gap-2 xl:gap-3 ml-auto flex-nowrap">
                     {navItems.map((item, index) => (
-                        <a
+                        <button
                             key={index}
-                            href={item.href}
-                            onClick={() => handleClick(item.name, item.onClick)}
+                            onClick={() => handleClick(item.name, item.href, item.onClick)}
                             className={`w-[110px] text-center px-2 py-1 text-sm xl:text-base font-normal rounded-full transition-all duration-300 ${
                                 activeLink === item.name ? 'bg-[#c6e2e0] text-black' : 'text-white bg-white/10'
                             }`}
                         >
                             {item.name}
-                        </a>
+                        </button>
                     ))}
                 </ul>
 
-                {/* Mobile Menu Icon */}
                 <img
                     onClick={() => setshowmobilemenu(true)}
                     src={assets.menu_icon}
@@ -77,7 +90,6 @@ const Navbar = () => {
                 />
             </div>
 
-            {/* Mobile Menu */}
             <div className={`fixed inset-0 z-40 bg-black/80 transition-transform duration-500 ${showmobilemenu ? "translate-x-0" : "translate-x-full"}`}>
                 <div className="flex justify-end p-4 sm:p-6">
                     <img
@@ -90,16 +102,15 @@ const Navbar = () => {
 
                 <ul className="flex flex-col items-center gap-6 mt-8 text-xl font-normal">
                     {navItems.map((item, index) => (
-                        <a
+                        <button
                             key={index}
-                            href={item.href}
-                            onClick={() => handleClick(item.name, item.onClick)}
+                            onClick={() => handleClick(item.name, item.href, item.onClick)}
                             className={`w-36 text-center px-8 py-4 rounded-full text-xl font-normal transition-all duration-300 ${
                                 activeLink === item.name ? 'bg-[#c6e2e0] text-black' : 'text-white bg-white/10'
                             }`}
                         >
                             {item.name}
-                        </a>
+                        </button>
                     ))}
                 </ul>
             </div>
